@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Trip Planner</h1>
+    </header>
+
+    <main>
+        <form id="itineraryForm">
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" value="mysore" required>
+            </div>
+            <div class="form-group">
+                <label for="days">Number of Days:</label>
+                <input type="number" id="days" name="days" value="3" required min="1" max="10">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value="30" required min="1">
+            </div>
+            <div class="form-group">
+                <label for="travellers">Number of Travellers:</label>
+                <input type="number" id="travellers" name="travellers" value="2" required min="1">
+            </div>
+            <div class="form-group">
+                <label for="travelType">Travel Type:</label>
+                <select id="travelType" name="travelType" required>
+                    <option value="leisure" selected>Leisure</option>
+                    <option value="business">Business</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="family">Family</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="budget">Budget:</label>
+                <select id="budget" name="budget" required>
+                    <option value="low">Low</option>
+                    <option value="mid" selected>Mid</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="customization" name="customization">
+                <label for="customization">Customization</label>
+            </div>
+            <button type="submit" id="generateBtn">Generate Itinerary</button>
+            <p id="status-message"></p>
+        </form>
+
+        <section id="itinerary-display" class="itinerary-container">
+            </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
